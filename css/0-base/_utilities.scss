@@ -1,0 +1,34 @@
+@use "../3-helpers" as *;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: $light-grayish-blue;
+
+  &--share {
+    border-radius: 999px;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    align-self: center;
+  }
+}
