@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/build/minified/style.css">
 
     <title>Frontend Mentor | Article preview component</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/build/production.min.js" defer></script>
 
 </head>
 <body>
@@ -30,14 +33,36 @@
                 to help you make any room feel complete.
             </div>
             <div class="article__author">
-                <img class="author__image" src="./images/avatar-michelle.jpg" alt="Michelle Appleton" role="presentation">
+                <img class="author__image" src="./images/avatar-michelle.jpg" alt="Michelle Appleton"
+                     role="presentation">
                 <div class="author__details">
                     <div class="author__name">Michelle Appleton</div>
                     <div class="author__publish-date">28 Jun 2020</div>
                 </div>
                 <div class="btn btn--share">
-                    <img src="./images/icon-share.svg" alt="Share this article" role="presentation">
-                    <span class="sr-only">Share</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" aria-labelledby="share">
+                        <path fill="#6E8098"
+                              d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+                    </svg>
+                    <span class="sr-only" id="share-mobile">Share</span>
+                </div>
+            </div>
+            <div class="article__share hidden">
+                <div class="share__text">SHARE</div>
+                <div class="share__socials">
+                    <div class="social-icon"><a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a></div>
+                    <div class="social-icon"><a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a></div>
+                    <div class="social-icon"><a href="#"><img src="./images/icon-pinterest.svg" alt="Pinterest"></a>
+                    </div>
+                </div>
+                <div class="share__container">
+                    <div class="btn btn--share btn--share-invert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" aria-labelledby="share">
+                            <path fill="#6E8098"
+                                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/>
+                        </svg>
+                        <span class="sr-only" id="share-desktop">Share</span>
+                    </div>
                 </div>
             </div>
         </div>

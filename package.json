@@ -1,13 +1,14 @@
 {
-  "name": "prova",
+  "name": "article-preview-component",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend Mentor | Article preview component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "grunt dev",
+    "build": "grunt"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["frontend", "frontend mentor", "article preview component"],
+  "author": "Matteo Minerva",
   "license": "ISC",
   "devDependencies": {
     "glob": "^7.2.0",

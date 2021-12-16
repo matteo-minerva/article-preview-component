@@ -1,3 +1,4 @@
 module.exports = {
-    beforeconcat: ['js/*.js']
+    esversion: 6,
+    beforeconcat: ['js/**/*.js']
 }

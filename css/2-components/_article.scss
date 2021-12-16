@@ -7,7 +7,7 @@
     max-width: 330px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     @include media("desktop") {
       display: flex;
       flex-direction: row;
@@ -35,15 +35,79 @@
   &__body {
     padding: 40px 36px 0 36px;
     @include media("desktop") {
+      position: relative;
       padding: 30px 40px;
     }
   }
 
+  &__share {
+    height: 80px;
+    background-color: $very-dark-grayish-blue;
+    margin-left: -36px;
+    margin-right: -36px;
+    display: flex;
+    padding: 20px 36px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    @include media("desktop") {
+      height: 55px;
+      position: absolute;
+      right: -34px;
+      bottom: 90px;
+      padding-bottom: unset;
+      padding-top: unset;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -16px;
+        border-width: 13px;
+        border-style: solid;
+        border-color: $very-dark-grayish-blue transparent transparent transparent;
+      }
+    }
+
+    .share__socials,
+    .share__text,
+    .share__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    .share__socials {
+      justify-content: space-around;
+    }
+
+    .share__text {
+      color: #b2d0f7;
+      letter-spacing: 5px;
+      font-size: 12px;
+      justify-content: start;
+    }
+
+    .share__container {
+      justify-content: end;
+      @include media("desktop") {
+        display: none;
+      }
+    }
+  }
+
+
   &__author {
     display: flex;
-    padding-bottom: 35px;
-    @include media("desktop"){
+    padding-bottom: 20px;
+    padding-top: 20px;
+    @include media("desktop") {
       padding-bottom: unset;
+      padding-top: 0;
     }
 
     .author__image {
@@ -58,10 +122,12 @@
       flex-direction: column;
       justify-content: center;
       padding-left: 20px;
+
       .author__name {
         color: $very-dark-grayish-blue;
         font-weight: 700;
       }
+
       .author__publish-date {
         padding-top: 2px;
         color: $grayish-blue;
@@ -85,7 +151,7 @@
     color: $desaturated-dark-blue;
     line-height: 1.5;
     font-weight: 500;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     @include media("desktop") {
       margin-bottom: 20px;
     }

@@ -18,8 +18,16 @@
   overflow: hidden;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .btn {
   background-color: $light-grayish-blue;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &--share {
     border-radius: 999px;
@@ -30,5 +38,18 @@
     align-items: center;
     float: right;
     align-self: center;
+
+    @include media("desktop") {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  &--share-invert {
+    background-color: $desaturated-dark-blue;
+
+    path {
+      fill: $light-grayish-blue;
+    }
   }
 }
